@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+    
+        table {
+            width: 70%;
+            /* Decrease the width of the table */
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+    
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+    
+        th {
+            background-color: #f2f2f2;
+        }
+    
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+    
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    
+        .btn-back {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>User Details</h1>
+    <table>
+        <tr>
+            <th>Application No</th>
+            <td>{{ user_details[0] }}</td>
+        </tr>
+        <tr>
+            <th>User ID</th>
+            <td>{{ user_details[1] }}</td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td>{{ user_details[2] }}</td>
+        </tr>
+        <tr>
+            <th>Date of Birth</th>
+            <td>{{ user_details[3] }}</td>
+        </tr>
+        <tr>
+            <th>Father's Name</th>
+            <td>{{ user_details[4] }}</td>
+        </tr>
+        <tr>
+            <th>Mother's Name</th>
+            <td>{{ user_details[5] }}</td>
+        </tr>
+        <tr>
+            <th>School Name</th>
+            <td>{{ user_details[6] }}</td>
+        </tr>
+        <tr>
+            <th>10th Board</th>
+            <td>{{ user_details[7] }}</td>
+        </tr>
+        <tr>
+            <th>10th Percentage</th>
+            <td>{{ user_details[8] }}</td>
+        </tr>
+        <tr>
+            <th>12th Board</th>
+            <td>{{ user_details[9] }}</td>
+        </tr>
+        <tr>
+            <th>12th Percentage</th>
+            <td>{{ user_details[10] }}</td>
+        </tr>
+        <tr>
+            <th>12th Cutoff</th>
+            <td>{{ user_details[11] }}</td>
+        </tr>
+        <tr>
+            <th>Caste</th>
+            <td>{{ user_details[12] }}</td>
+        </tr>
+        <tr>
+            <th>Community</th>
+            <td>{{ user_details[13] }}</td>
+        </tr>
+        <tr>
+            <th>Annual Income</th>
+            <td>{{ user_details[14] }}</td>
+        </tr>
+        <tr>
+            <th>Quota</th>
+            <td>{{ user_details[15] }}</td>
+        </tr>
+        <tr>
+            <th>Siblings Studying</th>
+            <td>{{ user_details[16] }}</td>
+        </tr>
+        <tr>
+            <th>Sibling Name</th>
+            <td>{{ user_details[17] }}</td>
+        </tr>
+        <tr>
+            <th>Sibling Department</th>
+            <td>{{ user_details[18] }}</td>
+        </tr>
+        <tr>
+            <th>Department Asking ID</th>
+            <td>{{ user_details[19] }}</td>
+        </tr>
+        <tr>
+            <th>10th Certificate</th>
+            <td>
+                <a href="{{ url_for('view_image', filename=user_details[1]|string + '_tenth.jpg') }}" class="btn">View 10th
+                    Certificate</a>
+            </td>
+        </tr>
+        <tr>
+            <th>12th Certificate</th>
+            <td>
+                <a href="{{ url_for('view_image', filename=user_details[1]|string + '_twelfth.jpg') }}" class="btn">View 12th
+                    Certificate</a>
+            </td>
+        </tr>
+    </table>
+    <div class="btn-back">
+        <a href="{{ url_for('manageusers') }}" class="btn">Back to User List</a>
+    </div>
+</body>
+
+</html>

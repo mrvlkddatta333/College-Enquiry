@@ -1,0 +1,6 @@
+admin credentials
+
+admin@gmail.com
+admin
+
+users to be created 
